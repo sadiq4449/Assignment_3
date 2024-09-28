@@ -40,13 +40,30 @@ void main() {
   }
 
   // Qno #4
+  // Create a list of numbers
   List<int> numbers = [25, 42, 12, 89, 5, 64, 37];
 
-  // Find the smallest and greatest number using built-in methods
-  int smallest = numbers.reduce((curr, next) => curr < next ? curr : next);
-  int greatest = numbers.reduce((curr, next) => curr > next ? curr : next);
+  // Find the smallest and greatest number using the built-in functions
+  int smallest = numbers.reduce((a, b) => a < b ? a : b);
+  int greatest = numbers.reduce((a, b) => a > b ? a : b);
 
   // Print the results
   print('Smallest number: $smallest');
   print('Greatest number: $greatest');
+
+  // Q no #5
+  // Create a map with name and phone keys
+  Map<String, String> contactInfo = {
+    'name': 'Sadiq',
+    'phone': '123456789',
+    'city': 'Karachi',
+    'code': 'PK123'
+  };
+
+  // Find all keys with length 4
+  for (var key in contactInfo.keys) {
+    if (key.length == 4) {
+      print('Key with length 4: $key');
+    }
+  }
 }
